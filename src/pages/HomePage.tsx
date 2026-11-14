@@ -1,6 +1,6 @@
 // ponytail: homepage combining editorial hero, URL-synced search/filter gallery, and pagination
 
-import { ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import React, { useRef } from 'react';
 import { ArtworkGrid } from '../components/ArtworkGrid';
 import { ErrorState } from '../components/ErrorState';
@@ -26,10 +26,6 @@ export const HomePage: React.FC = () => {
       {/* Hero Section */}
       <section className="hero" aria-label="Pengenalan Art Archive">
         <div className="hero__content">
-          <div className="hero__badge">
-            <Sparkles size={14} aria-hidden="true" />
-            <span>The Fine Art Collection</span>
-          </div>
           <h1 className="hero__title">
             Discover the stories behind the world&apos;s greatest artworks.
           </h1>
