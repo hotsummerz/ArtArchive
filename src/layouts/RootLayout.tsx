@@ -2,6 +2,7 @@
 
 import React, { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
+import { CONFIG } from '../config';
 import { Footer } from '../components/Footer';
 import { Navbar } from '../components/Navbar';
 
@@ -19,7 +20,11 @@ export const RootLayout: React.FC = () => {
       <main id="main-content" className="main-content" key={pathname}>
         <Outlet />
       </main>
-      <Footer />
+      <Footer
+        studentName={CONFIG.studentName}
+        nim={CONFIG.studentNim}
+        courseName={CONFIG.courseName}
+      />
     </div>
   );
 };

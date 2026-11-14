@@ -19,8 +19,8 @@ export const Badge: React.FC<BadgeProps> = ({ children, variant = 'secondary', c
       color: 'var(--color-text)'
     },
     accent: {
-      backgroundColor: 'rgba(161, 143, 123, 0.15)',
-      color: 'var(--color-accent)'
+      backgroundColor: 'var(--blue-light, #F0F6FD)',
+      color: 'var(--blue-deep, #1A3E6D)'
     }
   };
 
