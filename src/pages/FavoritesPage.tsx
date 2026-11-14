@@ -13,12 +13,11 @@ export const FavoritesPage: React.FC = () => {
   return (
     <div style={{ paddingTop: 'var(--space-10)' }}>
       <PageHeader
-        label="Koleksi Pilihan Anda"
         title="Karya Seni Favorit"
         description={
           favorites.length > 0
             ? `Menampilkan ${favorites.length} lukisan yang Anda simpan sebagai favorit pribadi.`
-            : 'Simpan lukisan yang menginspirasi Anda untuk diakses kembali kapan saja.'
+            : 'Simpan lukisan yang menginspirasi untuk diakses kembali kapan saja.'
         }
       />
 

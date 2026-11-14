@@ -63,9 +63,8 @@ export const CollectionsPage: React.FC = () => {
   return (
     <div>
       <PageHeader
-        label="Kurasi Mandiri"
         title="Koleksi Pribadi"
-        description="Kelompokkan karya seni berdasarkan tema, periode, atau preferensi estetika kuratorial Anda sendiri."
+        description="Kelompokkan karya seni berdasarkan tema, periode, atau preferensi estetika sesuai selera."
         action={
           !isFormVisible && (
             <button type="button" onClick={handleOpenForm} className="btn btn--primary">

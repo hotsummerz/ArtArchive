@@ -1,8 +1,9 @@
 // ponytail: editorial navigation bar with responsive mobile menu & live counter badges
 
-import { Bookmark, Compass, Heart, Menu, X } from 'lucide-react';
+import { Bookmark, Compass, ExternalLink, Heart, Menu, User, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { CONFIG } from '../config';
 import { useCollections } from '../context/CollectionsContext';
 import { useFavorites } from '../context/FavoritesContext';
 
@@ -61,6 +62,18 @@ export const Navbar: React.FC = () => {
               </span>
             )}
           </NavLink>
+
+          <a
+            href={CONFIG.profileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__link"
+            title="Website Profil Pribadi"
+          >
+            <User size={17} aria-hidden="true" />
+            <span>Profil</span>
+            <ExternalLink size={13} aria-hidden="true" style={{ opacity: 0.7 }} />
+          </a>
         </nav>
 
         {/* Mobile Hamburger Toggle */}
@@ -105,6 +118,18 @@ export const Navbar: React.FC = () => {
             <Bookmark size={18} />
             <span>Koleksi Pribadi ({collections.length})</span>
           </NavLink>
+
+          <a
+            href={CONFIG.profileUrl}
+            onClick={closeMenu}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__link"
+          >
+            <User size={18} />
+            <span>Profil</span>
+            <ExternalLink size={14} style={{ opacity: 0.7 }} />
+          </a>
         </nav>
       )}
     </header>

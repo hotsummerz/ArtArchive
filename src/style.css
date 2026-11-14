@@ -269,7 +269,7 @@ img {
   font-size: 0.65rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-text-muted, #85858A);
   font-weight: 600;
 }
 
@@ -293,12 +293,17 @@ img {
 
 .navbar__link:hover {
   color: var(--blue-deep, #1A3E6D);
-  background-color: var(--blue-light, #F0F6FD);
+  background-color: transparent;
+}
+
+.navbar__link:active {
+  color: var(--blue-deep, #1A3E6D);
+  background-color: transparent;
 }
 
 .navbar__link.active {
   color: var(--blue-deep, #1A3E6D);
-  background-color: var(--blue-subtle, #E2EDF9);
+  background-color: transparent;
   font-weight: 600;
 }
 
