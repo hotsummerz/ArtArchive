@@ -4,16 +4,17 @@
    ========================================================================== */
 
 :root {
-  /* Primary palette — White body with warm brown header, navbar & footer */
-  --color-background: #FFFFFF;
+  /* Primary palette — GLT bg with warm brown header, navbar & footer */
+  --color-background: #F8FAFD;
   --color-surface: #FFFFFF;
+  --color-surface-subtle: #F1F6FC;
   --color-brown-surface: #EFE9DF;
   --color-brown-border: #DDD4C5;
   --color-primary: #647D9B;
   --color-primary-hover: #4F6680;
   --color-secondary: #DCE5ED;
   --color-text: #292B2F;
-  --color-border: #E5E7EB;
+  --color-border: #E2E8F0;
   --color-accent: #A18F7B;
 
   /* Supporting colors */
@@ -101,6 +102,10 @@ body {
   flex-direction: column;
   overflow-x: hidden;
   background-color: var(--color-background);
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(123, 166, 222, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 90%, rgba(123, 166, 222, 0.06) 0%, transparent 50%);
+  background-attachment: fixed;
 }
 
 #root {
@@ -869,7 +874,7 @@ button:focus-visible,
 
 /* Skeleton Loading */
 .skeleton {
-  background: linear-gradient(90deg, #F3F4F6 25%, #E5E7EB 50%, #F3F4F6 75%);
+  background: linear-gradient(90deg, #F1F6FC 25%, #E2E8F0 50%, #F1F6FC 75%);
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.5s infinite;
   border-radius: var(--radius-sm);
