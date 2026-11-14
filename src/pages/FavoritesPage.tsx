@@ -24,7 +24,7 @@ export const FavoritesPage: React.FC = () => {
       <ArtworkGrid
         artworks={favorites}
         emptyTitle="Belum Ada Karya Favorit"
-        emptyMessage="Jelajahi galeri kami dan klik ikon hati pada karya seni yang Anda sukai untuk menyimpannya di sini."
+        emptyMessage="Jelajahi galeri kami dan klik ikon hati pada karya seni yang kamu sukai untuk menyimpannya di sini."
         actionText="Mulai Jelajahi Galeri"
         actionLink="/"
       />

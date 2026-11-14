@@ -15,7 +15,7 @@ export const NotFoundPage: React.FC = () => {
       </div>
       <h1 className="state-box__title">404 — Halaman Tidak Ditemukan</h1>
       <p className="state-box__message">
-        Halaman atau rute yang Anda tuju tidak berada dalam arsip digital kami. Silakan kembali ke beranda untuk menjelajahi karya seni lainnya.
+        Halaman atau rute yang dituju tidak berada dalam arsip digital kami. Silakan kembali ke beranda untuk menjelajahi karya seni lainnya.
       </p>
       <Link to="/" className="btn btn--primary">
         Kembali ke Galeri Utama

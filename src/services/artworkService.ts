@@ -22,13 +22,8 @@ export async function searchArtworks(
     return fetchFromCleveland(query, style, skip, limit, page, params.sort, signal);
   }
 
-  // Art Institute of Chicago attempt with fallback
-  try {
-    return await fetchFromAIC(query, style, page, limit, params.sort, signal);
-  } catch (err) {
-    console.warn('AIC API unavailable, falling back to Cleveland Open Access API:', err);
-    return fetchFromCleveland(query, style, skip, limit, page, params.sort, signal);
-  }
+  // Art Institute of Chicago attempt
+  return fetchFromAIC(query, style, page, limit, params.sort, signal);
 }
 
 export async function getArtworkById(id: string | number, signal?: AbortSignal): Promise<Artwork> {
@@ -36,12 +31,9 @@ export async function getArtworkById(id: string | number, signal?: AbortSignal):
     return getArtworkFromCleveland(id, signal);
   }
 
-  try {
-    return await getArtworkFromAIC(id, signal);
-  } catch (err) {
-    console.warn('AIC detail unavailable, trying Cleveland Museum API:', err);
-    return getArtworkFromCleveland(id, signal);
-  }
+  // If AIC is the provider, request directly from AIC without blindly falling back
+  // to an unreachable Cleveland endpoint which masks the real error (404/rate-limit).
+  return getArtworkFromAIC(id, signal);
 }
 
 // ============================================================================

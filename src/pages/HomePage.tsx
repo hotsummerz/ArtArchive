@@ -12,7 +12,7 @@ import { useArtworks } from '../hooks/useArtworks';
 import { useDocumentTitle } from '../hooks/useDocumentTitle';
 
 export const HomePage: React.FC = () => {
-  useDocumentTitle('Jelajah Koleksi Seni Rupa');
+  useDocumentTitle('Jelajah Koleksi Seni');
   const galleryRef = useRef<HTMLElement>(null);
   const { filters, updateFilters } = useArtworkFilters();
   const { data, loading, error, refetch } = useArtworks(filters);
@@ -30,7 +30,7 @@ export const HomePage: React.FC = () => {
             Discover the stories behind the world&apos;s greatest artworks.
           </h1>
           <p className="hero__lead">
-            Sebuah arsip digital kuratorial untuk menjelajahi lukisan agung dari seniman legendaris, periode bersejarah, dan aliran seni rupa dunia. Simpan karya favorit dan bangun koleksi pribadi Anda.
+            Sebuah arsip digital untuk menjelajahi berbagai lukisan dari seniman legendaris, periode bersejarah, dan aliran seni rupa dunia. Simpan karya favorit dan buat koleksi pribadimu.
           </p>
           <div className="hero__actions">
             <button type="button" onClick={scrollToGallery} className="btn btn--primary">

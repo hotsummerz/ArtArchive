@@ -200,8 +200,8 @@ export const CollectionDetailPage: React.FC = () => {
       {collection.items.length === 0 ? (
         <EmptyState
           title="Koleksi Ini Masih Kosong"
-          message="Anda belum menambahkan lukisan ke koleksi ini. Jelajahi galeri kami dan pilih 'Tambah ke Koleksi' pada halaman karya."
-          actionText="Jelajahi Galeri Seni"
+          message="Kamu belum menambahkan lukisan ke koleksi ini. Jelajahi galeri dan pilih 'Tambah ke Koleksi' pada halaman karya."
+          actionText="Jelajahi Galeri"
           actionLink="/"
         />
       ) : (

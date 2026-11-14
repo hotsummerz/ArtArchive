@@ -1,16 +1,12 @@
-// ponytail: editorial navigation bar with responsive mobile menu & live counter badges
+// ponytail: editorial navigation bar with clean aesthetic and responsive mobile menu
 
 import { Bookmark, Compass, ExternalLink, Heart, Menu, User, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { CONFIG } from '../config';
-import { useCollections } from '../context/CollectionsContext';
-import { useFavorites } from '../context/FavoritesContext';
 
 export const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { favorites } = useFavorites();
-  const { collections } = useCollections();
 
   const closeMenu = () => setIsMobileMenuOpen(false);
 
@@ -43,11 +39,6 @@ export const Navbar: React.FC = () => {
           >
             <Heart size={17} aria-hidden="true" />
             <span>Favorit</span>
-            {favorites.length > 0 && (
-              <span className="navbar__badge" aria-label={`${favorites.length} favorit tersimpan`}>
-                {favorites.length}
-              </span>
-            )}
           </NavLink>
 
           <NavLink
@@ -56,11 +47,6 @@ export const Navbar: React.FC = () => {
           >
             <Bookmark size={17} aria-hidden="true" />
             <span>Koleksi</span>
-            {collections.length > 0 && (
-              <span className="navbar__badge" aria-label={`${collections.length} koleksi pribadi`}>
-                {collections.length}
-              </span>
-            )}
           </NavLink>
 
           <a
@@ -107,7 +93,7 @@ export const Navbar: React.FC = () => {
             className={({ isActive }) => `navbar__link ${isActive ? 'active' : ''}`}
           >
             <Heart size={18} />
-            <span>Karya Favorit ({favorites.length})</span>
+            <span>Karya Favorit</span>
           </NavLink>
 
           <NavLink
@@ -116,7 +102,7 @@ export const Navbar: React.FC = () => {
             className={({ isActive }) => `navbar__link ${isActive ? 'active' : ''}`}
           >
             <Bookmark size={18} />
-            <span>Koleksi Pribadi ({collections.length})</span>
+            <span>Koleksi Pribadi</span>
           </NavLink>
 
           <a
