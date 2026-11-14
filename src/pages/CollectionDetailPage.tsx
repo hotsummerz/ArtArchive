@@ -37,7 +37,7 @@ export const CollectionDetailPage: React.FC = () => {
         </Link>
         <EmptyState
           title="Koleksi Tidak Ditemukan"
-          message="Koleksi kurasi dengan ID tersebut tidak ditemukan atau mungkin sudah dihapus."
+          message="Koleksi dengan ID tersebut tidak ditemukan atau mungkin sudah dihapus."
           actionText="Lihat Semua Koleksi"
           actionLink="/collections"
         />
@@ -238,7 +238,7 @@ export const CollectionDetailPage: React.FC = () => {
       <ConfirmDialog
         isOpen={isDeleteColDialogOpen}
         title="Hapus Koleksi?"
-        message={`Apakah Anda yakin ingin menghapus koleksi "${collection.name}"? Tindakan ini tidak dapat dibatalkan.`}
+        message={`Apakah kamu yakin ingin menghapus koleksi "${collection.name}"? Tindakan ini tidak dapat dibatalkan.`}
         confirmText="Hapus Koleksi"
         cancelText="Batal"
         danger={true}
@@ -250,7 +250,7 @@ export const CollectionDetailPage: React.FC = () => {
       <ConfirmDialog
         isOpen={artworkToRemoveId !== null}
         title="Lepas Karya dari Koleksi?"
-        message="Apakah Anda yakin ingin melepas karya ini dari koleksi? Karya tidak akan terhapus dari arsip utama atau favorit Anda."
+        message="Apakah kamu yakin ingin melepas karya ini dari koleksi? Karya tidak akan terhapus dari arsip utama atau favoritmu."
         confirmText="Lepas Karya"
         cancelText="Batal"
         danger={true}

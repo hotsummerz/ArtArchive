@@ -68,7 +68,7 @@ export async function httpGet<T>(url: string, options: RequestOptions = {}): Pro
       throw err;
     }
     throw new HttpError(
-      'Gagal terhubung ke server. Periksa koneksi internet Anda atau coba lagi.',
+      'Gagal terhubung ke server. Periksa koneksi internet atau coba lagi.',
       0
     );
   }

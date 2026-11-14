@@ -15,7 +15,7 @@ interface EmptyStateProps {
 
 export const EmptyState: React.FC<EmptyStateProps> = ({
   title = 'Tidak Ada Karya Seni Ditemukan',
-  message = 'Tidak ada hasil yang sesuai dengan kriteria penelusuran atau filter Anda saat ini.',
+  message = 'Tidak ada hasil yang sesuai dengan kriteria penelusuran atau filter saat ini.',
   actionText,
   actionLink,
   onAction,

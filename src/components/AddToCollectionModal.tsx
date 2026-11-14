@@ -52,7 +52,7 @@ export const AddToCollectionModal: React.FC<AddToCollectionModalProps> = ({ artw
           <div style={{ textAlign: 'center', padding: 'var(--space-6) 0' }}>
             <FolderPlus size={36} color="var(--color-primary)" style={{ margin: '0 auto var(--space-3)' }} />
             <p style={{ color: 'var(--color-text-secondary)', marginBottom: 'var(--space-4)', fontSize: '0.9rem' }}>
-              Anda belum memiliki koleksi pribadi. Buat koleksi pertama Anda terlebih dahulu.
+              Kamu belum memiliki koleksi pribadi. Buat koleksi pertamamu terlebih dahulu.
             </p>
             <Link to="/collections" onClick={onClose} className="btn btn--primary">
               <Plus size={16} />

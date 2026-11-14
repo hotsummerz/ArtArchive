@@ -16,7 +16,7 @@ export const FavoritesPage: React.FC = () => {
         title="Karya Seni Favorit"
         description={
           favorites.length > 0
-            ? `Menampilkan ${favorites.length} lukisan yang Anda simpan sebagai favorit pribadi.`
+            ? `Menampilkan ${favorites.length} lukisan yang kamu simpan sebagai favorit pribadi.`
             : 'Simpan lukisan yang menginspirasi untuk diakses kembali kapan saja.'
         }
       />

@@ -12,7 +12,7 @@ import { Collection } from '../types';
 import { validateCollectionDescription, validateCollectionName } from '../utils/validators';
 
 export const CollectionsPage: React.FC = () => {
-  useDocumentTitle('Koleksi Kurasi Pribadi');
+  useDocumentTitle('Koleksi Pribadi');
   const { collections, createCollection, deleteCollection } = useCollections();
 
   const [isFormVisible, setIsFormVisible] = useState(false);
@@ -189,7 +189,7 @@ export const CollectionsPage: React.FC = () => {
       {collections.length === 0 ? (
         <EmptyState
           title="Belum Ada Koleksi Terbuat"
-          message="Buat koleksi pertama Anda untuk mulai mengelompokkan karya seni sesuai tema atau seniman favorit Anda."
+          message="Buat koleksi pertamamu untuk mulai mengelompokkan karya seni sesuai tema atau seniman favoritmu."
           actionText="Buat Koleksi Sekarang"
           onAction={handleOpenForm}
         />
@@ -209,7 +209,7 @@ export const CollectionsPage: React.FC = () => {
       <ConfirmDialog
         isOpen={!!collectionToDelete}
         title="Hapus Koleksi?"
-        message={`Apakah Anda yakin ingin menghapus koleksi "${collectionToDelete?.name || ''}"? Seluruh karya seni di dalam koleksi ini akan dilepas (karya favorit Anda tetap aman).`}
+        message={`Apakah kamu yakin ingin menghapus koleksi "${collectionToDelete?.name || ''}"? Seluruh karya seni di dalam koleksi ini akan dilepas (karya favoritmu tetap aman).`}
         confirmText="Ya, Hapus Koleksi"
         cancelText="Batal"
         danger={true}
