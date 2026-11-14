@@ -70,7 +70,6 @@ art-archive/
 │   │   ├── EmptyState.tsx
 │   │   ├── ErrorState.tsx
 │   │   ├── FavoriteButton.tsx
-│   │   ├── FilterBar.tsx
 │   │   ├── Footer.tsx
 │   │   ├── Navbar.tsx
 │   │   ├── PageHeader.tsx

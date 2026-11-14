@@ -7,21 +7,6 @@ import { httpGet } from './http';
 
 const PAGE_SIZE = 12;
 
-// Standard curated art movements / styles
-export const ART_MOVEMENTS = [
-  'Semua Aliran',
-  'Impressionism',
-  'Post-Impressionism',
-  'Realism',
-  'Romanticism',
-  'Baroque',
-  'Renaissance',
-  'Modernism',
-  'Cubism',
-  'Surrealism',
-  'Expressionism'
-] as const;
-
 export async function searchArtworks(
   params: FilterParams = {},
   signal?: AbortSignal

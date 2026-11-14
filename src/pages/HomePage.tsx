@@ -4,7 +4,6 @@ import { ArrowDown, Sparkles } from 'lucide-react';
 import React, { useRef } from 'react';
 import { ArtworkGrid } from '../components/ArtworkGrid';
 import { ErrorState } from '../components/ErrorState';
-import { FilterBar } from '../components/FilterBar';
 import { Pagination } from '../components/Pagination';
 import { SearchBar } from '../components/SearchBar';
 import { SortSelect } from '../components/SortSelect';
@@ -60,11 +59,6 @@ export const HomePage: React.FC = () => {
               onChange={sort => updateFilters({ sort })}
             />
           </div>
-
-          <FilterBar
-            selectedStyle={filters.style}
-            onSelectStyle={style => updateFilters({ style })}
-          />
         </div>
 
         {error ? (
@@ -80,8 +74,8 @@ export const HomePage: React.FC = () => {
               loading={loading}
               emptyTitle="Tidak Ada Lukisan Ditemukan"
               emptyMessage={
-                filters.q || filters.style
-                  ? `Tidak ada lukisan yang cocok dengan kata kunci "${filters.q || ''}" pada aliran ${filters.style || 'yang dipilih'}.`
+                filters.q
+                  ? `Tidak ada lukisan yang cocok dengan kata kunci "${filters.q}".`
                   : 'Saat ini belum ada lukisan yang dapat ditampilkan.'
               }
             />
