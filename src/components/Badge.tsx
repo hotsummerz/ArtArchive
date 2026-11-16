@@ -12,15 +12,18 @@ export const Badge: React.FC<BadgeProps> = ({ children, variant = 'secondary', c
   const styles: Record<string, React.CSSProperties> = {
     primary: {
       backgroundColor: 'var(--color-primary)',
-      color: 'var(--color-white)'
+      color: 'var(--color-white)',
+      borderColor: 'var(--color-primary)'
     },
     secondary: {
       backgroundColor: 'var(--color-secondary)',
-      color: 'var(--color-text)'
+      color: 'var(--color-text)',
+      borderColor: 'var(--color-secondary)'
     },
     accent: {
       backgroundColor: 'var(--blue-light, #F0F6FD)',
-      color: 'var(--blue-deep, #1A3E6D)'
+      color: 'var(--blue-deep, #1A3E6D)',
+      borderColor: 'var(--blue-border-glt, #BED8F6)'
     }
   };
 
@@ -30,11 +33,14 @@ export const Badge: React.FC<BadgeProps> = ({ children, variant = 'secondary', c
       style={{
         display: 'inline-flex',
         alignItems: 'center',
-        padding: '0.2rem 0.65rem',
-        borderRadius: 'var(--radius-full)',
+        padding: '5px 12px',
+        borderRadius: '9999px',
         fontSize: '0.75rem',
-        fontWeight: 500,
-        letterSpacing: '0.02em',
+        fontWeight: 600,
+        letterSpacing: '0.03em',
+        textTransform: 'uppercase',
+        border: '1px solid',
+        fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
         ...styles[variant]
       }}
     >

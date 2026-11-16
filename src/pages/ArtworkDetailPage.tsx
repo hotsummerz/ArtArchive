@@ -49,7 +49,7 @@ export const ArtworkDetailPage: React.FC = () => {
   if (error || !artwork) {
     return (
       <div style={{ padding: 'var(--space-12) 0' }}>
-        <Link to="/" className="btn btn--ghost btn--sm" style={{ marginBottom: 'var(--space-6)' }}>
+        <Link to="/" className="btn btn--ghost btn--sm" style={{ marginBottom: 'var(--space-6)', borderColor: 'transparent' }}>
           <ArrowLeft size={16} />
           <span>Kembali ke Galeri</span>
         </Link>
@@ -93,8 +93,8 @@ export const ArtworkDetailPage: React.FC = () => {
 
   return (
     <article className="artwork-detail-page">
-      <div style={{ marginBottom: 'var(--space-6)' }}>
-        <Link to="/" className="btn btn--ghost btn--sm">
+      <div style={{ marginBottom: 'var(--space-6)', paddingTop: 'var(--space-6)' }}>
+        <Link to="/" className="btn btn--ghost btn--sm" style={{ borderColor: 'transparent' }}>
           <ArrowLeft size={16} />
           <span>Kembali ke Galeri</span>
         </Link>
@@ -115,7 +115,7 @@ export const ArtworkDetailPage: React.FC = () => {
         <div className="artwork-detail__info">
           {artwork.style && (
             <div style={{ marginBottom: 'var(--space-2)' }}>
-              <Badge variant="primary">{artwork.style}</Badge>
+              <Badge variant="accent">{artwork.style}</Badge>
             </div>
           )}
 
