@@ -20,5 +20,5 @@ function spaFallbackPlugin() {
 
 export default defineConfig({
   plugins: [react(), spaFallbackPlugin()],
-  base: '/'
+  base: '/' // ponytail: use '/' for custom domain, '/repo-name/' for username.github.io/repo-name/
 })
