@@ -1,5 +1,3 @@
-// ponytail: consolidated core interfaces across domain, API, and persistence
-
 export interface ArtworkSummary {
   id: number | string;
   title: string;

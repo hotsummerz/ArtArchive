@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react'
 import fs from 'node:fs'
 import path from 'node:path'
 
-// ponytail: inline 404.html generator for SPA deep linking on GitHub Pages without extra packages
 function spaFallbackPlugin() {
   return {
     name: 'spa-fallback',
@@ -20,5 +19,5 @@ function spaFallbackPlugin() {
 
 export default defineConfig({
   plugins: [react(), spaFallbackPlugin()],
-  base: '/' // ponytail: use '/' for custom domain, '/repo-name/' for username.github.io/repo-name/
+  base: '/'
 })

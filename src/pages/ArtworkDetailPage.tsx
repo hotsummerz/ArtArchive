@@ -1,5 +1,3 @@
-// ponytail: artwork detail page with curated museum presentation, favorites, collection modal, and note editor
-
 import { ArrowLeft, BookmarkPlus, Edit3, Heart, Info, Save, Trash2 } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';

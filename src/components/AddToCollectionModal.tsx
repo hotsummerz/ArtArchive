@@ -1,5 +1,3 @@
-// ponytail: modal allowing artwork insertion into personal collections
-
 import { FolderPlus, Plus, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';

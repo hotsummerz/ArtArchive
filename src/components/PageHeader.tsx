@@ -1,5 +1,3 @@
-// ponytail: consistent editorial page header component
-
 import React from 'react';
 
 interface PageHeaderProps {

@@ -1,5 +1,3 @@
-// ponytail: controlled debounced search input with immediate clear trigger
-
 import { Search, X } from 'lucide-react';
 import React, { useEffect, useRef, useState } from 'react';
 

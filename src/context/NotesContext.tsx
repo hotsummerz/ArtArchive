@@ -1,5 +1,3 @@
-// ponytail: personal notes context per artwork with localStorage persistence
-
 import React, { createContext, useCallback, useContext, useMemo } from 'react';
 import { STORAGE_KEYS } from '../config';
 import { useLocalStorage } from '../hooks/useLocalStorage';

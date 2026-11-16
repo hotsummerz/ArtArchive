@@ -1,5 +1,3 @@
-// ponytail: responsive artwork grid supporting skeleton state and empty fallback
-
 import React from 'react';
 import { ArtworkSummary } from '../types';
 import { ArtworkCard } from './ArtworkCard';

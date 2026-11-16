@@ -1,5 +1,3 @@
-// ponytail: 404 page fallback with return CTA
-
 import { Compass } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';

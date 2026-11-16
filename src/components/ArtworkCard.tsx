@@ -1,5 +1,3 @@
-// ponytail: reusable artwork presentation card with graceful image fallback
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ArtworkSummary } from '../types';

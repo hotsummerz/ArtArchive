@@ -1,5 +1,3 @@
-// ponytail: declarative document title manager with restoration
-
 import { useEffect } from 'react';
 import { CONFIG } from '../config';
 

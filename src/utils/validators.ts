@@ -1,5 +1,3 @@
-// ponytail: pure validation functions matching AGENT.md section 7 criteria
-
 export interface ValidationError {
   field: string;
   message: string;

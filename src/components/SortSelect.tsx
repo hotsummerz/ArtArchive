@@ -1,5 +1,3 @@
-// ponytail: sort dropdown component synchronized with URL query state
-
 import { ArrowUpDown } from 'lucide-react';
 import React from 'react';
 import { SortOption } from '../types';

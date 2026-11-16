@@ -1,5 +1,3 @@
-// ponytail: accessible badge for movement, style, and metadata tags
-
 import React from 'react';
 
 interface BadgeProps {

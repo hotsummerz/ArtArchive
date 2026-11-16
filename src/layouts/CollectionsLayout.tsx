@@ -1,5 +1,3 @@
-// ponytail: nested routing layout for personal collections section
-
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 

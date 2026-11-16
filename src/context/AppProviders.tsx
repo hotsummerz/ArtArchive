@@ -1,5 +1,3 @@
-// ponytail: unified provider composition root
-
 import React from 'react';
 import { CollectionsProvider } from './CollectionsContext';
 import { FavoritesProvider } from './FavoritesContext';

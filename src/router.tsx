@@ -1,5 +1,3 @@
-// ponytail: declarative React Router definition using createBrowserRouter and nested layouts
-
 import { createBrowserRouter } from 'react-router-dom';
 import { CollectionsLayout } from './layouts/CollectionsLayout';
 import { RootLayout } from './layouts/RootLayout';

@@ -1,5 +1,3 @@
-// ponytail: error presentation with retry action
-
 import { AlertCircle, RotateCcw } from 'lucide-react';
 import React from 'react';
 

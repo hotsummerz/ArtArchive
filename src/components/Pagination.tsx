@@ -1,5 +1,3 @@
-// ponytail: pagination controls with aria-current support
-
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import React from 'react';
 import { getPaginationRange } from '../utils/pagination';

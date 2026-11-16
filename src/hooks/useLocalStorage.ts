@@ -1,5 +1,3 @@
-// ponytail: robust local storage hook with quota error protection and JSON validation
-
 import { useCallback, useState } from 'react';
 
 export function useLocalStorage<T>(key: string, initialValue: T): [T, (value: T | ((prev: T) => T)) => void] {

@@ -1,5 +1,3 @@
-// ponytail: safe HTML to plain text without dangerouslySetInnerHTML
-
 export function stripHtml(htmlString?: string | null): string {
   if (!htmlString) return '';
   

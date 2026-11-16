@@ -1,5 +1,3 @@
-// ponytail: collection detail view displaying curatorial artworks with item removal & editing
-
 import { ArrowLeft, Edit2, Info, Trash2 } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';

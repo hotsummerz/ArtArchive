@@ -1,5 +1,3 @@
-// ponytail: favorites view presenting user's saved artworks
-
 import React from 'react';
 import { ArtworkGrid } from '../components/ArtworkGrid';
 import { PageHeader } from '../components/PageHeader';

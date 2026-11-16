@@ -1,5 +1,3 @@
-// ponytail: homepage combining editorial hero, URL-synced search/filter gallery, and pagination
-
 import { ArrowDown } from 'lucide-react';
 import React, { useRef } from 'react';
 import { ArtworkGrid } from '../components/ArtworkGrid';

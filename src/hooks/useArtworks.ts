@@ -1,5 +1,3 @@
-// ponytail: server state hook for gallery artworks search & pagination with AbortController cancellation
-
 import { useCallback, useEffect, useState } from 'react';
 import { searchArtworks } from '../services/artworkService';
 import { ArtworkSearchResult, FilterParams } from '../types';

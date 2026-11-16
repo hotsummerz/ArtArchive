@@ -1,6 +1,4 @@
-// ponytail: personal collections manager with creation form, validation, and confirmation dialog
-
-import { FolderPlus, Info, Plus } from 'lucide-react';
+import { FolderPlus, Info } from 'lucide-react';
 import React, { useRef, useState } from 'react';
 import { CollectionCard } from '../components/CollectionCard';
 import { ConfirmDialog } from '../components/ConfirmDialog';
@@ -65,14 +63,6 @@ export const CollectionsPage: React.FC = () => {
       <PageHeader
         title="Koleksi Pribadi"
         description="Kelompokkan karya seni berdasarkan tema, periode, atau preferensi estetika sesuai selera."
-        action={
-          !isFormVisible && (
-            <button type="button" onClick={handleOpenForm} className="btn btn--primary">
-              <Plus size={16} />
-              <span>Buat Koleksi Baru</span>
-            </button>
-          )
-        }
       />
 
       {/* Collection Creation Form */}

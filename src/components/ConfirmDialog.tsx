@@ -1,5 +1,3 @@
-// ponytail: accessible confirmation dialog with Escape and focus management
-
 import { AlertTriangle, X } from 'lucide-react';
 import React, { useEffect, useRef } from 'react';
 

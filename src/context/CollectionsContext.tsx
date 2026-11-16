@@ -1,5 +1,3 @@
-// ponytail: collections context managing personal curation collections
-
 import React, { createContext, useCallback, useContext, useMemo } from 'react';
 import { STORAGE_KEYS } from '../config';
 import { useLocalStorage } from '../hooks/useLocalStorage';

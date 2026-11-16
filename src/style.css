@@ -1,6 +1,5 @@
 /* ==========================================================================
    Art Archive — Design Tokens & Core Styles
-   Follows DESIGN.md specifications
    ========================================================================== */
 
 :root {
@@ -618,25 +617,30 @@ button:focus-visible,
 .hero {
   background-color: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
-  padding: var(--space-12) var(--space-16);
+  padding: var(--space-20) var(--space-16);
   margin-left: calc(-1 * var(--space-16));
   margin-right: calc(-1 * var(--space-16));
   margin-bottom: var(--space-10);
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 1024px) {
   .hero {
-    padding: var(--space-10) var(--space-8);
+    padding: var(--space-16) var(--space-8);
     margin-left: calc(-1 * var(--space-8));
     margin-right: calc(-1 * var(--space-8));
+    min-height: 80vh;
   }
 }
 
 @media (max-width: 640px) {
   .hero {
-    padding: var(--space-8) var(--space-5);
+    padding: var(--space-12) var(--space-5);
     margin-left: calc(-1 * var(--space-5));
     margin-right: calc(-1 * var(--space-5));
+    min-height: 75vh;
   }
 }
 

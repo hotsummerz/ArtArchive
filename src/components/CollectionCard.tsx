@@ -1,5 +1,3 @@
-// ponytail: curated collection card preview with thumbnail strip
-
 import { Folder, Trash2 } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';

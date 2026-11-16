@@ -1,5 +1,3 @@
-// ponytail: minimal pagination page list generator
-
 export function getPaginationRange(currentPage: number, totalPages: number, siblingCount = 1): (number | 'ellipsis')[] {
   if (totalPages <= 1) return [1];
 

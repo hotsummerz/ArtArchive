@@ -1,5 +1,3 @@
-// ponytail: editorial navigation bar with clean aesthetic and responsive mobile menu
-
 import { Bookmark, Compass, ExternalLink, Heart, Menu, User, X } from 'lucide-react';
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';

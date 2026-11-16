@@ -1,5 +1,3 @@
-// ponytail: minimal in-memory cache & fetch wrapper with AbortController support
-
 interface RequestOptions extends RequestInit {
   signal?: AbortSignal;
   skipCache?: boolean;

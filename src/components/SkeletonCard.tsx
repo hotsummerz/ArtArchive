@@ -1,5 +1,3 @@
-// ponytail: loading placeholder preserving artwork card aspect ratio
-
 import React from 'react';
 
 export const SkeletonCard: React.FC = () => {

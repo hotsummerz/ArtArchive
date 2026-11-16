@@ -1,5 +1,3 @@
-// ponytail: favorites context with local persistence and toast integration
-
 import React, { createContext, useCallback, useContext, useMemo } from 'react';
 import { STORAGE_KEYS } from '../config';
 import { useLocalStorage } from '../hooks/useLocalStorage';

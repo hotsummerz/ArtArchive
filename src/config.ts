@@ -1,5 +1,3 @@
-// ponytail: single source of truth for runtime configuration & env fallbacks
-
 export const CONFIG = {
   appName: import.meta.env.VITE_APP_NAME || 'Art Archive',
   appVersion: import.meta.env.VITE_APP_VERSION || '1.0.0',

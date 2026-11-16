@@ -1,5 +1,3 @@
-// ponytail: lightweight toast notification provider
-
 import React, { createContext, useCallback, useContext, useMemo, useState } from 'react';
 import { ToastMessage } from '../types';
 

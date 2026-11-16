@@ -1,5 +1,3 @@
-// ponytail: clean image URL builder with SVG placeholder fallback
-
 export function getArtworkImageUrl(imageId: string | null | undefined, directUrl?: string | null, width = 600): string {
   if (directUrl) return directUrl;
   if (!imageId) return createPlaceholderImageUrl('Karya Seni');
@@ -13,7 +11,6 @@ export function getArtworkImageUrl(imageId: string | null | undefined, directUrl
   return `https://www.artic.edu/iiif/2/${imageId}/full/${width},/0/default.jpg`;
 }
 
-// ponytail: lightweight inline SVG placeholder so missing images never break the UI or layout
 export function createPlaceholderImageUrl(text = 'Artwork'): string {
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750" width="600" height="750">
     <rect width="100%" height="100%" fill="#F1EEE7"/>

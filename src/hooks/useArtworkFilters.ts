@@ -1,5 +1,3 @@
-// ponytail: URL query parameter synchronization hook for gallery search & filters
-
 import { useCallback, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { FilterParams, SortOption } from '../types';

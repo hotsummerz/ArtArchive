@@ -1,5 +1,3 @@
-// ponytail: normalized artwork service supporting verified Open Access museum APIs
-
 import { CONFIG } from '../config';
 import { Artwork, ArtworkSearchResult, ArtworkSummary, FilterParams } from '../types';
 import { stripHtml } from '../utils/text';
@@ -252,7 +250,6 @@ async function getArtworkFromAIC(id: string | number, signal?: AbortSignal): Pro
   };
 }
 
-// ponytail: in-memory page sorter for consistent UX across both providers
 function applySorting(items: ArtworkSummary[], sort: string): ArtworkSummary[] {
   const sorted = [...items];
   switch (sort) {

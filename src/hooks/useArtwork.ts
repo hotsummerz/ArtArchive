@@ -1,5 +1,3 @@
-// ponytail: server state hook for artwork detail by ID
-
 import { useCallback, useEffect, useState } from 'react';
 import { getArtworkById } from '../services/artworkService';
 import { Artwork } from '../types';

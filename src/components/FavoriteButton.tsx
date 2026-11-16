@@ -1,5 +1,3 @@
-// ponytail: favorite toggle button with aria-pressed accessibility
-
 import { Heart } from 'lucide-react';
 import React from 'react';
 import { useFavorites } from '../context/FavoritesContext';
