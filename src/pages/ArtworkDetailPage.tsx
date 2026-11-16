@@ -99,106 +99,19 @@ export const ArtworkDetailPage: React.FC = () => {
       </div>
 
       <div className="artwork-detail">
-        {/* Left: Large Artwork Viewer */}
-        <div className="artwork-detail__viewer">
-          <img
-            src={imageUrl}
-            alt={`${artwork.title} oleh ${artwork.artist}`}
-            onError={() => setImgError(true)}
-            className="artwork-detail__image"
-          />
-        </div>
-
-        {/* Right: Curatorial Information & Actions */}
-        <div className="artwork-detail__info">
-          {artwork.style && (
-            <div style={{ marginBottom: 'var(--space-2)' }}>
-              <Badge variant="accent">{artwork.style}</Badge>
-            </div>
-          )}
-
-          <h1 className="artwork-detail__title">{artwork.title}</h1>
-          <p className="artwork-detail__artist">
-            {artwork.artist}
-            {artwork.artistBio && (
-              <span style={{ display: 'block', fontSize: '0.85rem', color: 'var(--color-text-muted)', marginTop: '0.2rem' }}>
-                {artwork.artistBio}
-              </span>
-            )}
-          </p>
-
-          {/* Action Buttons */}
-          <div className="artwork-detail__actions">
-            <button
-              type="button"
-              onClick={() => toggleFavorite(artwork)}
-              className={`btn ${isFav ? 'btn--secondary' : 'btn--primary'}`}
-              aria-pressed={isFav}
-            >
-              <Heart size={16} fill={isFav ? 'var(--color-error)' : 'none'} color={isFav ? 'var(--color-error)' : 'currentColor'} />
-              <span>{isFav ? 'Tersimpan di Favorit' : 'Simpan ke Favorit'}</span>
-            </button>
-
-            <button
-              type="button"
-              onClick={() => setIsCollectionModalOpen(true)}
-              className="btn btn--ghost"
-            >
-              <BookmarkPlus size={16} />
-              <span>Tambah ke Koleksi</span>
-            </button>
+        {/* Left Column: Artwork Viewer + Personal Notes */}
+        <div>
+          <div className="artwork-detail__viewer">
+            <img
+              src={imageUrl}
+              alt={`${artwork.title} oleh ${artwork.artist}`}
+              onError={() => setImgError(true)}
+              className="artwork-detail__image"
+            />
           </div>
 
-          {/* Curatorial Metadata Grid */}
-          <div className="artwork-detail__meta-grid">
-            <div className="artwork-detail__meta-item">
-              <span className="artwork-detail__meta-label">Tahun Pembuatan</span>
-              <span className="artwork-detail__meta-val">{artwork.date || '—'}</span>
-            </div>
-            <div className="artwork-detail__meta-item">
-              <span className="artwork-detail__meta-label">Medium &amp; Teknik</span>
-              <span className="artwork-detail__meta-val">{artwork.medium || '—'}</span>
-            </div>
-            {artwork.dimensions && (
-              <div className="artwork-detail__meta-item">
-                <span className="artwork-detail__meta-label">Dimensi Karya</span>
-                <span className="artwork-detail__meta-val">{artwork.dimensions}</span>
-              </div>
-            )}
-            {artwork.origin && (
-              <div className="artwork-detail__meta-item">
-                <span className="artwork-detail__meta-label">Asal / Budaya</span>
-                <span className="artwork-detail__meta-val">{artwork.origin}</span>
-              </div>
-            )}
-            <div className="artwork-detail__meta-item">
-              <span className="artwork-detail__meta-label">Hak Cipta</span>
-              <span className="artwork-detail__meta-val">
-                {artwork.isPublicDomain ? 'Public Domain (Domain Publik)' : 'Hak Cipta Dilindungi'}
-              </span>
-            </div>
-            {artwork.creditLine && (
-              <div className="artwork-detail__meta-item" style={{ gridColumn: '1 / -1' }}>
-                <span className="artwork-detail__meta-label">Kredit Koleksi</span>
-                <span className="artwork-detail__meta-val" style={{ fontSize: '0.85rem' }}>
-                  {artwork.creditLine}
-                </span>
-              </div>
-            )}
-          </div>
-
-          {/* Curatorial Description */}
-          {artwork.description && (
-            <div>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', fontWeight: 500, marginBottom: 'var(--space-2)' }}>
-                Ulasan Kuratorial
-              </h2>
-              <p className="artwork-detail__description">{artwork.description}</p>
-            </div>
-          )}
-
-          {/* Form: Personal Notes (Controlled Component with Validation) */}
-          <section className="artwork-notes" aria-label="Catatan pribadi">
+          {/* Form: Personal Notes */}
+          <section className="artwork-notes" aria-label="Catatan pribadi" style={{ marginTop: 'var(--space-6)' }}>
             <div className="artwork-notes__header">
               <h2 className="artwork-notes__title">Catatan Pribadi</h2>
               {existingNote && !isEditingNote && (
@@ -296,6 +209,95 @@ export const ArtworkDetailPage: React.FC = () => {
               </form>
             )}
           </section>
+        </div>
+
+        {/* Right Column: Curatorial Information & Actions */}
+        <div className="artwork-detail__info">
+          {artwork.style && (
+            <div style={{ marginBottom: 'var(--space-2)' }}>
+              <Badge variant="accent">{artwork.style}</Badge>
+            </div>
+          )}
+
+          <h1 className="artwork-detail__title">{artwork.title}</h1>
+          <p className="artwork-detail__artist">
+            {artwork.artist}
+            {artwork.artistBio && (
+              <span style={{ display: 'block', fontSize: '0.85rem', color: 'var(--color-text-muted)', marginTop: '0.2rem' }}>
+                {artwork.artistBio}
+              </span>
+            )}
+          </p>
+
+          {/* Action Buttons */}
+          <div className="artwork-detail__actions">
+            <button
+              type="button"
+              onClick={() => toggleFavorite(artwork)}
+              className={`btn ${isFav ? 'btn--secondary' : 'btn--primary'}`}
+              aria-pressed={isFav}
+            >
+              <Heart size={16} fill={isFav ? 'var(--color-error)' : 'none'} color={isFav ? 'var(--color-error)' : 'currentColor'} />
+              <span>{isFav ? 'Tersimpan di Favorit' : 'Simpan ke Favorit'}</span>
+            </button>
+
+            <button
+              type="button"
+              onClick={() => setIsCollectionModalOpen(true)}
+              className="btn btn--ghost"
+            >
+              <BookmarkPlus size={16} />
+              <span>Tambah ke Koleksi</span>
+            </button>
+          </div>
+
+          {/* Curatorial Metadata Grid */}
+          <div className="artwork-detail__meta-grid">
+            <div className="artwork-detail__meta-item">
+              <span className="artwork-detail__meta-label">Tahun Pembuatan</span>
+              <span className="artwork-detail__meta-val">{artwork.date || '—'}</span>
+            </div>
+            <div className="artwork-detail__meta-item">
+              <span className="artwork-detail__meta-label">Medium &amp; Teknik</span>
+              <span className="artwork-detail__meta-val">{artwork.medium || '—'}</span>
+            </div>
+            {artwork.dimensions && (
+              <div className="artwork-detail__meta-item">
+                <span className="artwork-detail__meta-label">Dimensi Karya</span>
+                <span className="artwork-detail__meta-val">{artwork.dimensions}</span>
+              </div>
+            )}
+            {artwork.origin && (
+              <div className="artwork-detail__meta-item">
+                <span className="artwork-detail__meta-label">Asal / Budaya</span>
+                <span className="artwork-detail__meta-val">{artwork.origin}</span>
+              </div>
+            )}
+            <div className="artwork-detail__meta-item">
+              <span className="artwork-detail__meta-label">Hak Cipta</span>
+              <span className="artwork-detail__meta-val">
+                {artwork.isPublicDomain ? 'Public Domain (Domain Publik)' : 'Hak Cipta Dilindungi'}
+              </span>
+            </div>
+            {artwork.creditLine && (
+              <div className="artwork-detail__meta-item" style={{ gridColumn: '1 / -1' }}>
+                <span className="artwork-detail__meta-label">Kredit Koleksi</span>
+                <span className="artwork-detail__meta-val" style={{ fontSize: '0.85rem' }}>
+                  {artwork.creditLine}
+                </span>
+              </div>
+            )}
+          </div>
+
+          {/* Curatorial Description */}
+          {artwork.description && (
+            <div>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', fontWeight: 500, marginBottom: 'var(--space-2)' }}>
+                Ulasan Kuratorial
+              </h2>
+              <p className="artwork-detail__description">{artwork.description}</p>
+            </div>
+          )}
         </div>
       </div>
 

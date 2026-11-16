@@ -73,8 +73,7 @@ export const CollectionsPage: React.FC = () => {
             border: '1px solid var(--color-border)',
             borderRadius: 'var(--radius-lg)',
             padding: 'var(--space-8)',
-            marginBottom: 'var(--space-10)',
-            maxWidth: '640px'
+            marginBottom: 'var(--space-10)'
           }}
           aria-label="Formulir pembuatan koleksi baru"
         >
