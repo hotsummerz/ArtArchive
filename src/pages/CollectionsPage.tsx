@@ -63,6 +63,14 @@ export const CollectionsPage: React.FC = () => {
       <PageHeader
         title="Koleksi Pribadi"
         description="Kelompokkan karya seni berdasarkan tema, periode, atau preferensi estetika sesuai selera."
+        action={
+          collections.length > 0 && !isFormVisible ? (
+            <button onClick={handleOpenForm} className="btn btn--primary">
+              <FolderPlus size={18} />
+              Buat Koleksi
+            </button>
+          ) : undefined
+        }
       />
 
       {/* Collection Creation Form */}
